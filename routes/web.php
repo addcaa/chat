@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','Login\LoginController@loadd');
+Route::post('reg/rego','Login\LoginController@rego');
+
+Route::get('log/add','Login\LoginController@add');
+Route::post('log/login','Login\LoginController@login');
+
+Route::get('index','Index\IndexController@index');
